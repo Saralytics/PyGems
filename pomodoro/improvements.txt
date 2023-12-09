@@ -1,0 +1,2 @@
+Todo:
+1. Cannot press 'start' when the timer already started
