@@ -1,2 +1,7 @@
 Todo:
 1. Cannot press 'start' when the timer already started
+2. Add a bell sound
+3. Package it
+    https://www.youtube.com/watch?v=Iv_dECet_oM
+    https://www.youtube.com/watch?v=QWqxRchawZY
+4. add requirements txt

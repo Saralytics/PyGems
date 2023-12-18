@@ -6,7 +6,7 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 25
+WORK_MIN = 1
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 CHECKMARK = "✓"
@@ -62,6 +62,9 @@ def count_down(count):
         if reps % 2 != 0:
             checkmarks += CHECKMARK
             checkmark_label.config(text=checkmarks)
+            window.attributes('-topmost', 1)
+            window.attributes('-topmost', 0)
+            window.bell()
         start_timer()
 
 

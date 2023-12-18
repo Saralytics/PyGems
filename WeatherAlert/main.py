@@ -4,9 +4,8 @@ from dotenv import load_dotenv
 
 weather_url = "https://api.openweathermap.org/data/2.5/weather"
 forcast_url = "https://api.openweathermap.org/data/2.5/forecast"
-load_dotenv()
-appid = os.getenv("API_KEY")
-print(appid)
+load_dotenv('.env')
+appid = os.getenv("OWM_API_KEY")
 
 parameters = {
     "q": "Beijing",

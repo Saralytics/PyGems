@@ -23,9 +23,12 @@ def search():
     except FileNotFoundError:
         messagebox.showinfo(title="Oops", message="Data file not found")
     else:
-        if searcher.search():
-            search_term, email, pwd = searcher.search()
-            messagebox.showinfo(title=f"{search_term}", message=f"{search_term}: email {email}, password {pwd}")
+        try:
+            if searcher.search():
+                search_term, email, pwd = searcher.search()
+                messagebox.showinfo(title=f"{search_term}", message=f"{search_term}: email {email}, password {pwd}")
+        except FileNotFoundError:
+            messagebox.showinfo(title="Oops", message="You have no data yet, please add some first")
         else:
             messagebox.showinfo(title="Error", message="No entry found")
     finally:
